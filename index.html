@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="">
+<head>
+	<title>AngularJs</title>
+	<script type="text/javascript" src="js/angular.min.js"></script>
+</head>
+<body >
+	<!-- works with specific input type  -->
+	<input type="text" ng-model="name" />
+	<p>hello {{name}} </p>
+
+	<!-- not works with the div  -->
+	<div ng-model="name1" contenteditable="true"></div>
+	<div ng-bind="name1">hello {{name}} </div>
+
+	<!-- works with select/textarea input type  -->
+	<textarea ng-model="name2"></textarea>
+	<p>hello {{name2}} </p>
+
+	<div>
+		<select ng-model="name3" style="float: left">
+			<option>Amritsar</option>
+			<option>Bathinda</option>
+			<option>Chandigarh</option>
+			<option>Delhi</option>
+			<option>Haryana</option>
+		</select>
+		<p style="float: left">hello {{name3}} </p>
+	</div>
+</body>
+</html>
